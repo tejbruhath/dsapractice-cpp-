@@ -46,6 +46,7 @@ int main() {
     //example value in pointerVector
     cout<<"value in pointerVector(address): "<<pointerVector.at(0)<<endl;
     cout<<"value of obj pointerV is pointing too: "<<pointerVector.at(0)->getValue()<<endl;//lot of "point" in this line XD
+    // we use "->" to access the member functions of the object the pointer is pointing to
     //set method
     pointerVector.at(0)->setValue(pointerVector.at(0)->getValue() + 5);
     cout<<"value of obj 1 after set method: "<<pointerVector.at(0)->getValue()<<endl;
@@ -57,6 +58,13 @@ int main() {
         delete ptr;//what happens if we dont delete the pointer?
     }
 
+  /*STL containers only store and manage the pointers themselves, not what they point to
 
+When using containers of raw pointers, you're responsible for memory management
+
+When the container is cleared or destroyed, it doesn't automatically delete the objects pointed to by the pointers
+*/
+
+  cout<<"pointers finished!"<<endl;
 
 }
